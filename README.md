@@ -27,3 +27,17 @@ npm run dev
 ```
 
 Esto compilará el proyecto. Puedes acceder a la aplicación en tu navegador en http://localhost:5173
+
+# Uso de la Aplicación
+1. Pega el enlace de un video de *YouTube en el campo de entrada y haz clic en el botón "Añadir".
+2. El video se mostrará en la cuadrícula junto con su miniatura e información.
+3. Haz clic en cualquier video de la cuadrícula para abrir un modal con el título, descripción y miniatura del video. Desde el modal, puedes reproducir el video.
+4. Para eliminar un video, haz clic en el botón "Eliminar" en la parte inferior del modal.
+
+(*) Solo se aceptarán enlaces en formato 'youtube.com' - 'youtu.be'
+   
+## Capturas de Pantalla
+Aquí se muestran algunas capturas de pantalla de la aplicación en funcionamiento:
+
+Captura de pantalla 1
+Captura de pantalla 2

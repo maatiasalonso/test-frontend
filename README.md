@@ -1,35 +1,29 @@
-# test-frontent
+# Album Online - Frontent
 
-This template should help get you started developing with Vue 3 in Vite.
+Este proyecto es un álbum online para videos de YouTube. Permite pegar enlaces de videos de YouTube y visualizarlos en una cuadrícula con miniaturas e información. También ofrece la posibilidad de reproducir y eliminar los videos guardados.
 
-## Recommended IDE Setup
+## Configuración del Proyecto
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Antes de comenzar, asegúrate de tener instalado Node.js en tu máquina.
 
-## Customize configuration
+## Paso 1: Clonar el repositorio
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+```bash
+git clone <URL_DEL_REPOSITORIO>
+```
 
-## Project Setup
+## Paso 2: Instalación de dependencias
+En el directorio del proyecto, instala las dependencias necesarias ejecutando el siguiente comando:
 
-```sh
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Paso 3: Ejecutar el servidor de desarrollo
+Una vez completados los pasos anteriores, puedes iniciar el servidor de desarrollo ejecutando el siguiente comando:
 
-```sh
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Esto compilará el proyecto. Puedes acceder a la aplicación en tu navegador en http://localhost:5173

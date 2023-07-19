@@ -9,7 +9,7 @@
       >
         <div class="relative flex justify-end">
           <img
-            :src="video.snippet.thumbnails.standard.url"
+            :src="video.snippet.thumbnails.standard ? video.snippet.thumbnails.standard.url : video.snippet.thumbnails.default"
             :alt="video.title"
             class="w-full h-full rounded-lg"
           />

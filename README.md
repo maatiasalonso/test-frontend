@@ -1,35 +1,58 @@
-# test-frontent
+# Album Online - Frontent
 
-This template should help get you started developing with Vue 3 in Vite.
+Este proyecto es un álbum online para videos de YouTube. Permite pegar enlaces de videos de YouTube y visualizarlos en una cuadrícula con miniaturas e información. También ofrece la posibilidad de reproducir y eliminar los videos guardados.
 
-## Recommended IDE Setup
+## Configuración del Proyecto
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Antes de comenzar, asegúrate de tener instalado Node.js en tu máquina.
 
-## Customize configuration
+## Paso 1: Clonar el repositorio
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+```bash
+git clone <URL_DEL_REPOSITORIO>
+```
 
-## Project Setup
+## Paso 2: Instalación de dependencias
+En el directorio del proyecto, instala las dependencias necesarias ejecutando el siguiente comando:
 
-```sh
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Paso 3: Ejecutar el servidor de desarrollo
+Una vez completados los pasos anteriores, puedes iniciar el servidor de desarrollo ejecutando el siguiente comando:
 
-```sh
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
+Esto compilará el proyecto. Puedes acceder a la aplicación en tu navegador en http://localhost:5173
 
-```sh
-npm run build
-```
+# Uso de la Aplicación
+1. Pega el enlace de un video de *YouTube en el campo de entrada y haz clic en el botón "Añadir".
+2. El video se mostrará en la cuadrícula junto con su miniatura e información.
+3. Haz clic en cualquier video de la cuadrícula para abrir un modal con el título, descripción y miniatura del video. Desde el modal, puedes reproducir el video.
+4. Para eliminar un video, haz clic en el botón "Eliminar" en la parte superior derecha de cada video en la cuadricula.
 
-### Lint with [ESLint](https://eslint.org/)
+(*) Solo se aceptarán enlaces en formato 'youtube.com' - 'youtu.be'
+   
+## Capturas de Pantalla
+Aquí se muestran algunas capturas de pantalla de la aplicación en funcionamiento:
 
-```sh
-npm run lint
-```
+1. Pantalla de Inicio
+![Pantalla de Inicio](https://readme-test.s3.us-east-2.amazonaws.com/Screenshot%20from%202023-07-11%2003-51-22.png?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEAaCXNhLWVhc3QtMSJHMEUCIQDV88TEkZWCqmdVooJrfllcanB7WcPD%2FJ54LhEtLk%2BtHgIgCmHtV4nNo%2BUkYCvCUcDsMk3gv9yKw2ZstRE2Ka%2BZmjgq7QIIuf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2MjE5NzE3ODg0NTIiDJiodVL5hrtQ2p9bxyrBAueovNj3JnzPj1CkP2mqXuZ08%2BXAH4XiKUJWloxLgYwDZSj%2FTFJNbfTgDKV0tIAYeuI7jc12xYzm17Zp3I8AO%2FJU62SdmYt4vHMuDozqXuRlBCblAO5xSXr7o%2BY0FWIKnqf9q%2FUn%2FbhaITw20Zungy9ji%2FAsaJEH08Liv6RoPAJYTs0QVOo8G6WRZra01oUJ46Q4EN4ksq8%2B6XmvzjbZOmiDrJ8jgarB9ogmrLvGDoalgXvUuPpXeBctvQbhRLt3FBMLQsQalUxKHIQrkBMeu8mrYGho4YwBH9HjlXK0DnU84Zr7ceVHfxirx8kPz9bAnse67lGuTCXPOGrzDRxsiJkK53g6Kyt%2BLbUDYZfj3WaiXAP5vkXMPb0XyXbwk9hcREDX0NerI0Khgd7Berlktn8kKFPE9hmoUSNNC3n9E9MsXjDPhbKlBjqzApdomgl9fgvU0lp%2BRf0WefVDBKBvTXiuk16309YZnTr3wOsKmuwgkek%2FlNwMGdm4Ykn2NKXMB%2Fla7%2BvZAbg3ZibaHKxWwKdWJ7xEbD1%2BlnFlFYnObnqqxfy%2F8k8blWlyhg%2Bn7M3RsKFrxSLQNhDeeXbKW8IEX80GbCJaWjZnkMxSAdA8gTGmPHeHE1aPllZIQ018YP0q27mx2W%2FESvripg9jB2LJwBy%2FXBUfIbPJ3LLcqwsGtUCv7t%2Fg2d18%2FWK5hsrNA14NmQUs1arnJ9U07JeOrg5uCMi5h8nGP1XWEAs3lYVrNRA2aj%2BaW%2FL%2FupHzCiYM%2FF96VHfOSPWl6atJtB2n2pT8TJwLPfrZKpX5XGSXdKc489iEN2kXDtrrO2FUFxNgsVBa1J7lQavcZvdRLEkld4U%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230711T075435Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAZBUDIKKSKQ2TAME2%2F20230711%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Signature=8dcb643151535678da81467ef538ade02a41ad2028adf4f6aa6dc21764e408ee)
+
+2. Añadir Video
+![Añadir Video](https://readme-test.s3.us-east-2.amazonaws.com/Screenshot%20from%202023-07-11%2003-51-50.png?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEAaCXNhLWVhc3QtMSJHMEUCIQDV88TEkZWCqmdVooJrfllcanB7WcPD%2FJ54LhEtLk%2BtHgIgCmHtV4nNo%2BUkYCvCUcDsMk3gv9yKw2ZstRE2Ka%2BZmjgq7QIIuf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2MjE5NzE3ODg0NTIiDJiodVL5hrtQ2p9bxyrBAueovNj3JnzPj1CkP2mqXuZ08%2BXAH4XiKUJWloxLgYwDZSj%2FTFJNbfTgDKV0tIAYeuI7jc12xYzm17Zp3I8AO%2FJU62SdmYt4vHMuDozqXuRlBCblAO5xSXr7o%2BY0FWIKnqf9q%2FUn%2FbhaITw20Zungy9ji%2FAsaJEH08Liv6RoPAJYTs0QVOo8G6WRZra01oUJ46Q4EN4ksq8%2B6XmvzjbZOmiDrJ8jgarB9ogmrLvGDoalgXvUuPpXeBctvQbhRLt3FBMLQsQalUxKHIQrkBMeu8mrYGho4YwBH9HjlXK0DnU84Zr7ceVHfxirx8kPz9bAnse67lGuTCXPOGrzDRxsiJkK53g6Kyt%2BLbUDYZfj3WaiXAP5vkXMPb0XyXbwk9hcREDX0NerI0Khgd7Berlktn8kKFPE9hmoUSNNC3n9E9MsXjDPhbKlBjqzApdomgl9fgvU0lp%2BRf0WefVDBKBvTXiuk16309YZnTr3wOsKmuwgkek%2FlNwMGdm4Ykn2NKXMB%2Fla7%2BvZAbg3ZibaHKxWwKdWJ7xEbD1%2BlnFlFYnObnqqxfy%2F8k8blWlyhg%2Bn7M3RsKFrxSLQNhDeeXbKW8IEX80GbCJaWjZnkMxSAdA8gTGmPHeHE1aPllZIQ018YP0q27mx2W%2FESvripg9jB2LJwBy%2FXBUfIbPJ3LLcqwsGtUCv7t%2Fg2d18%2FWK5hsrNA14NmQUs1arnJ9U07JeOrg5uCMi5h8nGP1XWEAs3lYVrNRA2aj%2BaW%2FL%2FupHzCiYM%2FF96VHfOSPWl6atJtB2n2pT8TJwLPfrZKpX5XGSXdKc489iEN2kXDtrrO2FUFxNgsVBa1J7lQavcZvdRLEkld4U%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230711T075607Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAZBUDIKKSKQ2TAME2%2F20230711%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Signature=77b4447830170881e4a7a8e087a2b0c692d46d76a20679959e17f910bd27852f)
+
+3. Cuadricula con Miniaturas
+![Cuadricula con miniaturas](https://readme-test.s3.us-east-2.amazonaws.com/Screenshot%20from%202023-07-11%2003-51-56.png?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEAaCXNhLWVhc3QtMSJHMEUCIQDV88TEkZWCqmdVooJrfllcanB7WcPD%2FJ54LhEtLk%2BtHgIgCmHtV4nNo%2BUkYCvCUcDsMk3gv9yKw2ZstRE2Ka%2BZmjgq7QIIuf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2MjE5NzE3ODg0NTIiDJiodVL5hrtQ2p9bxyrBAueovNj3JnzPj1CkP2mqXuZ08%2BXAH4XiKUJWloxLgYwDZSj%2FTFJNbfTgDKV0tIAYeuI7jc12xYzm17Zp3I8AO%2FJU62SdmYt4vHMuDozqXuRlBCblAO5xSXr7o%2BY0FWIKnqf9q%2FUn%2FbhaITw20Zungy9ji%2FAsaJEH08Liv6RoPAJYTs0QVOo8G6WRZra01oUJ46Q4EN4ksq8%2B6XmvzjbZOmiDrJ8jgarB9ogmrLvGDoalgXvUuPpXeBctvQbhRLt3FBMLQsQalUxKHIQrkBMeu8mrYGho4YwBH9HjlXK0DnU84Zr7ceVHfxirx8kPz9bAnse67lGuTCXPOGrzDRxsiJkK53g6Kyt%2BLbUDYZfj3WaiXAP5vkXMPb0XyXbwk9hcREDX0NerI0Khgd7Berlktn8kKFPE9hmoUSNNC3n9E9MsXjDPhbKlBjqzApdomgl9fgvU0lp%2BRf0WefVDBKBvTXiuk16309YZnTr3wOsKmuwgkek%2FlNwMGdm4Ykn2NKXMB%2Fla7%2BvZAbg3ZibaHKxWwKdWJ7xEbD1%2BlnFlFYnObnqqxfy%2F8k8blWlyhg%2Bn7M3RsKFrxSLQNhDeeXbKW8IEX80GbCJaWjZnkMxSAdA8gTGmPHeHE1aPllZIQ018YP0q27mx2W%2FESvripg9jB2LJwBy%2FXBUfIbPJ3LLcqwsGtUCv7t%2Fg2d18%2FWK5hsrNA14NmQUs1arnJ9U07JeOrg5uCMi5h8nGP1XWEAs3lYVrNRA2aj%2BaW%2FL%2FupHzCiYM%2FF96VHfOSPWl6atJtB2n2pT8TJwLPfrZKpX5XGSXdKc489iEN2kXDtrrO2FUFxNgsVBa1J7lQavcZvdRLEkld4U%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230711T075643Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAZBUDIKKSKQ2TAME2%2F20230711%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Signature=64cbfb6f479ead664bd2a1f7483c3996c71a76f67303ef894ceb31b6e7e4c290)
+
+4. Modal con Detalles del Video
+![Modal Video](https://readme-test.s3.us-east-2.amazonaws.com/Screenshot%20from%202023-07-11%2003-52-04.png?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEAaCXNhLWVhc3QtMSJHMEUCIQDV88TEkZWCqmdVooJrfllcanB7WcPD%2FJ54LhEtLk%2BtHgIgCmHtV4nNo%2BUkYCvCUcDsMk3gv9yKw2ZstRE2Ka%2BZmjgq7QIIuf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2MjE5NzE3ODg0NTIiDJiodVL5hrtQ2p9bxyrBAueovNj3JnzPj1CkP2mqXuZ08%2BXAH4XiKUJWloxLgYwDZSj%2FTFJNbfTgDKV0tIAYeuI7jc12xYzm17Zp3I8AO%2FJU62SdmYt4vHMuDozqXuRlBCblAO5xSXr7o%2BY0FWIKnqf9q%2FUn%2FbhaITw20Zungy9ji%2FAsaJEH08Liv6RoPAJYTs0QVOo8G6WRZra01oUJ46Q4EN4ksq8%2B6XmvzjbZOmiDrJ8jgarB9ogmrLvGDoalgXvUuPpXeBctvQbhRLt3FBMLQsQalUxKHIQrkBMeu8mrYGho4YwBH9HjlXK0DnU84Zr7ceVHfxirx8kPz9bAnse67lGuTCXPOGrzDRxsiJkK53g6Kyt%2BLbUDYZfj3WaiXAP5vkXMPb0XyXbwk9hcREDX0NerI0Khgd7Berlktn8kKFPE9hmoUSNNC3n9E9MsXjDPhbKlBjqzApdomgl9fgvU0lp%2BRf0WefVDBKBvTXiuk16309YZnTr3wOsKmuwgkek%2FlNwMGdm4Ykn2NKXMB%2Fla7%2BvZAbg3ZibaHKxWwKdWJ7xEbD1%2BlnFlFYnObnqqxfy%2F8k8blWlyhg%2Bn7M3RsKFrxSLQNhDeeXbKW8IEX80GbCJaWjZnkMxSAdA8gTGmPHeHE1aPllZIQ018YP0q27mx2W%2FESvripg9jB2LJwBy%2FXBUfIbPJ3LLcqwsGtUCv7t%2Fg2d18%2FWK5hsrNA14NmQUs1arnJ9U07JeOrg5uCMi5h8nGP1XWEAs3lYVrNRA2aj%2BaW%2FL%2FupHzCiYM%2FF96VHfOSPWl6atJtB2n2pT8TJwLPfrZKpX5XGSXdKc489iEN2kXDtrrO2FUFxNgsVBa1J7lQavcZvdRLEkld4U%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230711T075722Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAZBUDIKKSKQ2TAME2%2F20230711%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Signature=21d4aeddf7ecdf7289fecea577de1682cfc3ee2ebeef34cd81fd67f51317e2a5)
+
+5. Confirmación de Eliminación
+![Confirmación Eliminación](https://readme-test.s3.us-east-2.amazonaws.com/Screenshot%20from%202023-07-11%2003-52-08.png?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEAaCXNhLWVhc3QtMSJHMEUCIQDV88TEkZWCqmdVooJrfllcanB7WcPD%2FJ54LhEtLk%2BtHgIgCmHtV4nNo%2BUkYCvCUcDsMk3gv9yKw2ZstRE2Ka%2BZmjgq7QIIuf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2MjE5NzE3ODg0NTIiDJiodVL5hrtQ2p9bxyrBAueovNj3JnzPj1CkP2mqXuZ08%2BXAH4XiKUJWloxLgYwDZSj%2FTFJNbfTgDKV0tIAYeuI7jc12xYzm17Zp3I8AO%2FJU62SdmYt4vHMuDozqXuRlBCblAO5xSXr7o%2BY0FWIKnqf9q%2FUn%2FbhaITw20Zungy9ji%2FAsaJEH08Liv6RoPAJYTs0QVOo8G6WRZra01oUJ46Q4EN4ksq8%2B6XmvzjbZOmiDrJ8jgarB9ogmrLvGDoalgXvUuPpXeBctvQbhRLt3FBMLQsQalUxKHIQrkBMeu8mrYGho4YwBH9HjlXK0DnU84Zr7ceVHfxirx8kPz9bAnse67lGuTCXPOGrzDRxsiJkK53g6Kyt%2BLbUDYZfj3WaiXAP5vkXMPb0XyXbwk9hcREDX0NerI0Khgd7Berlktn8kKFPE9hmoUSNNC3n9E9MsXjDPhbKlBjqzApdomgl9fgvU0lp%2BRf0WefVDBKBvTXiuk16309YZnTr3wOsKmuwgkek%2FlNwMGdm4Ykn2NKXMB%2Fla7%2BvZAbg3ZibaHKxWwKdWJ7xEbD1%2BlnFlFYnObnqqxfy%2F8k8blWlyhg%2Bn7M3RsKFrxSLQNhDeeXbKW8IEX80GbCJaWjZnkMxSAdA8gTGmPHeHE1aPllZIQ018YP0q27mx2W%2FESvripg9jB2LJwBy%2FXBUfIbPJ3LLcqwsGtUCv7t%2Fg2d18%2FWK5hsrNA14NmQUs1arnJ9U07JeOrg5uCMi5h8nGP1XWEAs3lYVrNRA2aj%2BaW%2FL%2FupHzCiYM%2FF96VHfOSPWl6atJtB2n2pT8TJwLPfrZKpX5XGSXdKc489iEN2kXDtrrO2FUFxNgsVBa1J7lQavcZvdRLEkld4U%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230711T075803Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAZBUDIKKSKQ2TAME2%2F20230711%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Signature=106d61504e99b5178ccba4c233d9fbf17838df7dc113ebf424fae8a30dcfc19d)
+
+6. Video Eliminado
+![Video Eliminado](https://readme-test.s3.us-east-2.amazonaws.com/Screenshot%20from%202023-07-11%2003-52-13.png?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEAaCXNhLWVhc3QtMSJHMEUCIQDV88TEkZWCqmdVooJrfllcanB7WcPD%2FJ54LhEtLk%2BtHgIgCmHtV4nNo%2BUkYCvCUcDsMk3gv9yKw2ZstRE2Ka%2BZmjgq7QIIuf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2MjE5NzE3ODg0NTIiDJiodVL5hrtQ2p9bxyrBAueovNj3JnzPj1CkP2mqXuZ08%2BXAH4XiKUJWloxLgYwDZSj%2FTFJNbfTgDKV0tIAYeuI7jc12xYzm17Zp3I8AO%2FJU62SdmYt4vHMuDozqXuRlBCblAO5xSXr7o%2BY0FWIKnqf9q%2FUn%2FbhaITw20Zungy9ji%2FAsaJEH08Liv6RoPAJYTs0QVOo8G6WRZra01oUJ46Q4EN4ksq8%2B6XmvzjbZOmiDrJ8jgarB9ogmrLvGDoalgXvUuPpXeBctvQbhRLt3FBMLQsQalUxKHIQrkBMeu8mrYGho4YwBH9HjlXK0DnU84Zr7ceVHfxirx8kPz9bAnse67lGuTCXPOGrzDRxsiJkK53g6Kyt%2BLbUDYZfj3WaiXAP5vkXMPb0XyXbwk9hcREDX0NerI0Khgd7Berlktn8kKFPE9hmoUSNNC3n9E9MsXjDPhbKlBjqzApdomgl9fgvU0lp%2BRf0WefVDBKBvTXiuk16309YZnTr3wOsKmuwgkek%2FlNwMGdm4Ykn2NKXMB%2Fla7%2BvZAbg3ZibaHKxWwKdWJ7xEbD1%2BlnFlFYnObnqqxfy%2F8k8blWlyhg%2Bn7M3RsKFrxSLQNhDeeXbKW8IEX80GbCJaWjZnkMxSAdA8gTGmPHeHE1aPllZIQ018YP0q27mx2W%2FESvripg9jB2LJwBy%2FXBUfIbPJ3LLcqwsGtUCv7t%2Fg2d18%2FWK5hsrNA14NmQUs1arnJ9U07JeOrg5uCMi5h8nGP1XWEAs3lYVrNRA2aj%2BaW%2FL%2FupHzCiYM%2FF96VHfOSPWl6atJtB2n2pT8TJwLPfrZKpX5XGSXdKc489iEN2kXDtrrO2FUFxNgsVBa1J7lQavcZvdRLEkld4U%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230711T075842Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAZBUDIKKSKQ2TAME2%2F20230711%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Signature=aea3d632f1f2bd3c13441e62ffb96c9990d0432f67d93a6549c5742ad079e7c9)

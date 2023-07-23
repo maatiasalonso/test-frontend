@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="my-auto basis-3/5">
-                  <p class="text-2xl font-semibold">{{ video.title }}</p>
+                  <p class="text-2xl font-semibold">{{ video.snippet.title }}</p>
                   <p class="mt-2 text-lg">{{ truncatedDescription }}</p>
                 </div>
               </DialogDescription>
@@ -63,26 +63,21 @@
 </template>
 
 <script setup>
-import { ref, defineProps, computed, reactive } from 'vue'
-import axios from 'axios'
+import { ref, defineProps, computed, reactive, onMounted } from 'vue'
+import VideosService from '../services/VideosService'
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue'
 
 const props = defineProps(['videoId'])
 const videoId = ref(props.videoId)
 const video = ref()
 const showVideoData = ref(false)
-
-axios
-  .get(`https://4j4p13sgej.execute-api.us-east-2.amazonaws.com/dev/videos/${videoId.value}`)
-  .then((response) => {
-    video.value = reactive(response.data)
-    showVideoData.value = true
-  })
-  .catch((error) => {
-    console.error('Error retrieving video:', error)
-  })
-
 const isOpen = ref(true)
+
+onMounted(async () => {
+  const data = await VideosService.get(videoId.value)
+  video.value = reactive(data)
+  showVideoData.value = true
+})
 
 function closeModal() {
   isOpen.value = false
@@ -91,10 +86,10 @@ function closeModal() {
 
 const truncatedDescription = computed(() => {
   const maxLength = 200
-  if (video.value.description && video.value.description.length > maxLength) {
-    return video.value.description.substring(0, maxLength) + '...'
+  if (video.value.snippet.description && video.value.snippet.description.length > maxLength) {
+    return video.value.snippet.description.substring(0, maxLength) + '...'
   }
-  return video.value.description
+  return video.value.snippet.description
 })
 
 const embedUrl = computed(() => {

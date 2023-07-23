@@ -92,12 +92,13 @@
 import { ref, getCurrentInstance } from 'vue'
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogTitle } from '@headlessui/vue'
 import SuccessModal from './SuccessModal.vue'
-import axios from 'axios'
+import VideosService from '../services/VideosService'
 const props = defineProps(['videoId'])
 const videoId = ref(props.videoId)
 const message = ref('')
 const showModal = ref(false)
 const isLoading = ref(false)
+const isOpen = ref(true)
 const instance = getCurrentInstance()
 
 const hideModal = () => {
@@ -106,21 +107,11 @@ const hideModal = () => {
 
 const deleteVideo = async () => {
   isLoading.value = true
-
-  axios
-    .delete(`https://4j4p13sgej.execute-api.us-east-2.amazonaws.com/dev/videos/${videoId.value}`)
-    .then((response) => {
-      message.value = response.data.message
-      showModal.value = true
-      instance.emit('videoRefresh')
-    })
-    .catch((error) => {
-      console.error('Error retrieving video:', error)
-      showModal.value = ref(true)
-    })
+  const data = await VideosService.delete(videoId.value)
+  message.value = data.message
+  showModal.value = true
+  instance.emit('videoRefresh')
 }
-
-const isOpen = ref(true)
 
 function closeModal() {
   isOpen.value = false

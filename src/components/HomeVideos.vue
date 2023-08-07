@@ -2,6 +2,9 @@
   <div class="mt-10">
     <h1 class="text-2xl font-semibold">Añadir nuevo video</h1>
     <AddVideoButton class="mt-5" @videoRefresh="handleVideoAdded" :emit="emit" />
+    <span class="text-xs pl-5 text-red-400 font-semibold"
+      >* URL's validas: (www.youtube.com/, www.youtu.be/, m.youtube.com/, youtu.be/)
+    </span>
   </div>
   <div v-if="loadingVideos" class="mt-5">Cargando videos...</div>
   <div v-else class="mt-10">

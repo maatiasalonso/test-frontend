@@ -70,7 +70,7 @@ const hideModal = () => {
 
 const isURLValid = computed(() => {
   const youtubeUrlPattern =
-    /^(?:(?:https?:\/\/)?(?:www\.)?)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/
+    /^(?:(?:https?:\/\/)?(?:www\.|m\.)?)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\/|watch\?v=|watch\?.+&v=))([\w-]{11})/
   matches = urlInput.value.match(youtubeUrlPattern)
 
   return youtubeUrlPattern.test(urlInput.value)

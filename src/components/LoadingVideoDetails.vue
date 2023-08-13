@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center"><ProgressSpinner />;</div>
+  <div class="flex justify-center"><ProgressSpinner /></div>
 </template>
 
 <script setup>

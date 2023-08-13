@@ -6,7 +6,7 @@
       >* URL's validas: (www.youtube.com/, www.youtu.be/, m.youtube.com/, youtu.be/)
     </span>
   </div>
-  <div v-if="loadingVideos" class="mt-5">Cargando videos...</div>
+  <div v-if="loadingVideos" class="mt-5"><LoadingVideoList /></div>
   <div v-else class="mt-10">
     <div v-if="videos.length">
       <VideoList :videos="videos" @videoRefresh="handleVideoAdded" :emit="emit" />
@@ -20,6 +20,7 @@ import { ref, onMounted, reactive, getCurrentInstance } from 'vue'
 import AddVideoButton from './AddVideoButton.vue'
 import VideoList from './VideoList.vue'
 import VideosService from '../services/VideosService'
+import LoadingVideoList from './LoadingVideoList.vue'
 
 const loadingVideos = ref(true)
 const videos = reactive([])

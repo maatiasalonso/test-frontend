@@ -1,5 +1,5 @@
 <template>
-  <TransitionRoot appear :show="isOpen" as="template" v-if="showVideoData">
+  <TransitionRoot appear :show="isOpen" as="template">
     <Dialog as="div" @close="closeModal" class="relative z-10">
       <TransitionChild
         as="template"
@@ -30,28 +30,37 @@
               <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">
                 <div class="flex justify-end">
                   <button
-                    type="button"
                     class="inline-flex justify-center text-xl font-bold text-black border border-transparent rounded-md"
                     @click="closeModal"
+                    v-tooltip.top="'Cerrar'"
+                    type="text"
+                    placeholder="Top"
                   >
                     X
                   </button>
                 </div>
               </DialogTitle>
 
-              <DialogDescription class="flex justify-center gap-4">
-                <div class="w-full h-0 pb-[56.25%] relative">
-                  <iframe
-                    :src="embedUrl"
-                    title="Video Player"
-                    class="absolute inset-0 w-full h-full"
-                    allowfullscreen
-                  ></iframe>
+              <DialogDescription>
+                <div v-if="!showVideoData">
+                  <LoadingVideoDetails />
                 </div>
+                <div class="sm:flex justify-center gap-4" v-else>
+                  <div class="w-full h-0 pb-[56.25%] relative mt-4 sm:mt-0">
+                    <iframe
+                      :src="embedUrl"
+                      title="Video Player"
+                      class="absolute inset-0 w-full h-full"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
 
-                <div class="my-auto basis-3/5">
-                  <p class="text-2xl font-semibold">{{ video.snippet.title }}</p>
-                  <p class="mt-2 text-lg">{{ truncatedDescription }}</p>
+                  <div class="basis-3/5 mt-5 sm:my-auto">
+                    <p class="text-2xl font-semibold">{{ video.snippet.title }}</p>
+                    <ScrollPanel class="mt-2" style="width: 100%; height: 200px">
+                      <p>{{ video.snippet.description }}</p>
+                    </ScrollPanel>
+                  </div>
                 </div>
               </DialogDescription>
             </DialogPanel>
@@ -65,7 +74,9 @@
 <script setup>
 import { ref, defineProps, computed, reactive, onMounted } from 'vue'
 import VideosService from '../services/VideosService'
+import ScrollPanel from 'primevue/scrollpanel'
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue'
+import LoadingVideoDetails from './LoadingVideoDetails.vue'
 
 const props = defineProps(['videoId'])
 const videoId = ref(props.videoId)
@@ -83,14 +94,6 @@ function closeModal() {
   isOpen.value = false
   showVideoData.value = false
 }
-
-const truncatedDescription = computed(() => {
-  const maxLength = 200
-  if (video.value.snippet.description && video.value.snippet.description.length > maxLength) {
-    return video.value.snippet.description.substring(0, maxLength) + '...'
-  }
-  return video.value.snippet.description
-})
 
 const embedUrl = computed(() => {
   return `https://www.youtube.com/embed/${videoId.value}`

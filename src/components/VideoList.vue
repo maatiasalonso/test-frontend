@@ -21,6 +21,9 @@
           <button
             @click.stop=";(showModal[video.id] = !showModal[video.id]), setCurrentVideoId(video.id)"
             class="absolute flex items-center justify-center px-1 py-1 mt-2 mr-2 text-white bg-gray-900"
+            v-tooltip.top="'Borrar'"
+            type="text"
+            placeholder="Top"
           >
             <CloseIcon />
           </button>

@@ -13,6 +13,7 @@
     "@headlessui/vue": "^1.7.14",
     "@heroicons/vue": "^2.0.18",
     "axios": "^1.4.0",
+    "primevue": "^3.32.0",
     "vue": "^3.2.36"
   },
   "devDependencies": {
